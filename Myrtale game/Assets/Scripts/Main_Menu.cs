@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Main_Menu : MonoBehaviour
 {
-    public string first_Scene;
     void Start()
     {
         
@@ -16,9 +15,9 @@ public class Main_Menu : MonoBehaviour
         
     }
 
-    public void StartGame()
+    public void PlayGame()
     {
-        SceneManager.LoadScene(first_Scene);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void OpenOptions()
